@@ -9,9 +9,13 @@ public class BackEndDevs extends DevTeam {
         super(isTechLead, competencies);
     }
 
-    public static List<FrontEndDevs> getMembers() {
-        FrontEndDevs sophie = new FrontEndDevs(true, new String[]{"Java", "SpringBoot"});
-        FrontEndDevs kevin = new FrontEndDevs(false, new String[]{"Java", "SpringBoot"});
-        return Arrays.stream(new FrontEndDevs[]{sophie, kevin}).toList();
+    public static List<BackEndDevs> getMembers() {
+        BackEndDevs sophie = new BackEndDevs(true, new String[]{"Java", "SpringBoot"});
+        BackEndDevs kevin = new BackEndDevs(false, new String[]{"Java", "SpringBoot"});
+        return Arrays.stream(new BackEndDevs[]{sophie, kevin}).toList();
+    }
+
+    public static BackEndDevs findFirstFreeDev() {
+        return getMembers().get(0);
     }
 }
