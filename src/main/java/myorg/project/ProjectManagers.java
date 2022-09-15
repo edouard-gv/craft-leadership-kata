@@ -15,9 +15,4 @@ public class ProjectManagers {
         firstTask.assign(firstFreeDev);
     }
 
-    public void distributeTasks(Project project) {
-        Task firstTask = chooseMostImportantTask(project);
-        BackEndDevs firstFreeDev = BackEndDevs.findFirstFreeDev();
-        assignTaskToDev(firstTask, firstFreeDev);
-    }
 }
