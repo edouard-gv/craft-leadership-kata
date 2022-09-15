@@ -11,11 +11,11 @@ public class ProjectManagers {
         return project.tasks().get(0);
     }
 
-    private void assignTaskToDev(Task firstTask, BackEndDevs firstFreeDev) {
+    public void assignTaskToDev(Task firstTask, BackEndDevs firstFreeDev) {
         firstTask.assign(firstFreeDev);
     }
 
-    void distributeTasks(Project project) {
+    public void distributeTasks(Project project) {
         Task firstTask = chooseMostImportantTask(project);
         BackEndDevs firstFreeDev = BackEndDevs.findFirstFreeDev();
         assignTaskToDev(firstTask, firstFreeDev);
