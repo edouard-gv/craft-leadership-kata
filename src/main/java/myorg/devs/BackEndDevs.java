@@ -1,5 +1,7 @@
 package myorg.devs;
 
+import myorg.project.Task;
+
 import java.util.Arrays;
 import java.util.List;
 
@@ -17,5 +19,9 @@ public class BackEndDevs extends DevTeam {
 
     public static BackEndDevs findFirstFreeDev() {
         return getMembers().get(0);
+    }
+
+    public void assignTaskToDev(Task firstTask) {
+        firstTask.assign(this);
     }
 }
