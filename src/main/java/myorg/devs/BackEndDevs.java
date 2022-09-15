@@ -1,5 +1,7 @@
 package myorg.devs;
 
+import myorg.project.Project;
+import myorg.project.ProjectManagers;
 import myorg.project.Task;
 
 import java.util.Arrays;
@@ -23,5 +25,11 @@ public class BackEndDevs extends DevTeam {
 
     public void assignTaskToMe(Task firstTask) {
         firstTask.assign(this);
+    }
+
+    public void assignTaskToMe(Project project) {
+        ProjectManagers leadPM = ProjectManagers.getLeadPM();
+        Task firstTask = leadPM.chooseMostImportantTask(project);
+        assignTaskToMe(firstTask);
     }
 }
