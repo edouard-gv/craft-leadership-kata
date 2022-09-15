@@ -16,7 +16,7 @@ class ProjectManagersTest {
         ProjectManagers leadPM = ProjectManagers.getLeadPM();
         Task firstTask = leadPM.chooseMostImportantTask(project);
         BackEndDevs firstFreeDev = BackEndDevs.findFirstFreeDev();
-        firstFreeDev.assignTaskToDev(firstTask);
+        firstFreeDev.assignTaskToMe(firstTask);
         assertThat(aTask.assignee()).isNotNull();
     }
 }

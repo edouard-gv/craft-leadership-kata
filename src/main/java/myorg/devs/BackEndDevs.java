@@ -21,7 +21,7 @@ public class BackEndDevs extends DevTeam {
         return getMembers().get(0);
     }
 
-    public void assignTaskToDev(Task firstTask) {
+    public void assignTaskToMe(Task firstTask) {
         firstTask.assign(this);
     }
 }
