@@ -8,6 +8,7 @@ import java.util.Arrays;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class ProjectManagersTest {
+    //TODO: change name of this test
 
     @Test
     public void shouldDistributeTask() {

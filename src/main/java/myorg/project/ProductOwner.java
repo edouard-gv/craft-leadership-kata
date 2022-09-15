@@ -1,8 +1,8 @@
 package myorg.project;
 
-public class ProjectManagers {
-    public static ProjectManagers getLeadPM() {
-        return new ProjectManagers();
+public class ProductOwner {
+    public static ProductOwner getLeadPM() {
+        return new ProductOwner();
     }
 
     public Task chooseMostImportantTask(Project project) {
