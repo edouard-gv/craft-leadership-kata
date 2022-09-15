@@ -7,15 +7,18 @@ import java.util.Arrays;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ProjectManagersTest {
-    //TODO: change name of this test
+class ProjectTest {
 
     @Test
     public void shouldDistributeTask() {
         Task aTask = new Task();
         Project project = new Project(Arrays.stream(new Task[]{aTask}).toList());
+        tick(project);
+        assertThat(aTask.assignee()).isNotNull();
+    }
+
+    public void tick(Project project) {
         BackEndDevs firstFreeDev = BackEndDevs.findFirstFreeDev();
         firstFreeDev.assignTaskToMe(project);
-        assertThat(aTask.assignee()).isNotNull();
     }
 }
