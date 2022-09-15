@@ -12,7 +12,8 @@ class ProjectManagersTest {
     public void shouldDistributeTask() {
         Task aTask = new Task();
         Project project = new Project(Arrays.stream(new Task[]{aTask}).toList());
-        project.distributeTasks();
+        ProjectManagers leadPM = ProjectManagers.getLeadPM();
+        leadPM.distributeTasks(project);
         assertThat(aTask.assignee()).isNotNull();
     }
 }
