@@ -1,9 +1,9 @@
 package myorg.project;
 
-import myorg.devs.BackEndDevs;
+import myorg.devs.BackEndDeveloper;
 
 public class ProjectManagers {
-    public static ProjectManagers getLeadPM() {
+    public static ProjectManagers getProjectManager() {
         return new ProjectManagers();
     }
 
@@ -13,7 +13,7 @@ public class ProjectManagers {
 
     void distributeTasks(Project project) {
         Task firstTask = chooseMostImportantTask(project);
-        BackEndDevs firstFreeDev = BackEndDevs.findFirstFreeDev();
+        BackEndDeveloper firstFreeDev = BackEndDeveloper.findFirstFreeDev();
         firstTask.assign(firstFreeDev);
     }
 }

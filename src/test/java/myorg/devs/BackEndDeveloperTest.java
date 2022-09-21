@@ -4,11 +4,11 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class BackEndDevsTest {
+class BackEndDeveloperTest {
 
     @Test
     public void shouldKnowSpringBoot() {
-        for (DevTeam dev : BackEndDevs.getMembers()) {
+        for (BackEndDeveloper dev : BackEndDeveloper.getMembers()) {
             assertThat(dev.getCompetencies()).contains("SpringBoot");
         }
     }
