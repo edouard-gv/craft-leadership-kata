@@ -2,9 +2,9 @@ package myorg.project;
 
 import myorg.devs.BackEndDeveloper;
 
-public class ProjectManagers {
-    public static ProjectManagers getProjectManager() {
-        return new ProjectManagers();
+public class ProjectManager {
+    public static ProjectManager getProjectManager() {
+        return new ProjectManager();
     }
 
     public Task chooseMostImportantTask(Project project) {
